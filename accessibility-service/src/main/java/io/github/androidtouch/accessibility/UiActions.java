@@ -415,6 +415,12 @@ public final class UiActions {
             }
             cur = parent;
         }
+        if (cur != null) {
+            try {
+                cur.recycle();
+            } catch (Throwable ignored) {
+            }
+        }
         return null;
     }
 
@@ -430,6 +436,12 @@ public final class UiActions {
             } catch (Throwable ignored) {
             }
             cur = parent;
+        }
+        if (cur != null) {
+            try {
+                cur.recycle();
+            } catch (Throwable ignored) {
+            }
         }
         return null;
     }
